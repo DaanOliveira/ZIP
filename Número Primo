@@ -1,0 +1,24 @@
+#include <stdio.h>
+  
+int main() {
+  
+    int num, a=0, b=0, primo, c;
+    scanf("%d", &num); // QUANTIDADE DE TESTES QUE PODERÃO SER FEITOS
+    if (num >=1 && num<=100){
+        for (a=0; a<num; a++){ //CONTROLA QUANTAS VEZES VAI SER DIGITADO
+            scanf("%d", &primo);
+            if (primo>1 && primo<=10000000){ 
+            for(c=primo-1; c>1; c--){
+                if (primo%c==0) 
+                b++;
+            }
+            if (b!=0)
+            printf("%d nao eh primo\n", primo);
+            else
+            printf("%d eh primo\n", primo);
+            b=0;
+        }
+    }
+}
+    return 0;
+}
