@@ -1,0 +1,40 @@
+#include <stdio.h>
+  
+int main() {
+  
+    int L, i, j;
+    double M[12][12], soma=0, media=0; 
+    char a; // aqui sera definido o 'S' para soma ou o 'M' para média.
+     
+    scanf ("%d", &L); //selecione a linha 
+    scanf (" %c", &a); // selecione a operação
+    if(L<0||L>11){ 
+        printf("0.0\n");
+}
+    else{ 
+        for (i=0; i<=11; i++){ //preenchimento da linha, valores digitados pelo usuario
+        for (j=0; j<=11; j++){ //preenchimento da coluna, valores digitados pelo usuario
+            scanf("%lf", &M[i][j]); //declaração dos valores da matriz
+            if (i==L){ // i é o valor da linha e L é a linha que o usuario escolheu
+                if (a =='S'){ //escolhido soma
+                    soma=soma+M[i][j];
+                }
+                else if (a =='M'){// escolhido media
+                    media=media+M[i][j];
+                }
+                 
+            }
+             
+        }
+        }
+    media=media/12; //calcular o valor da média
+    if (a =='S'){ //se escolhdo a soma
+        printf("%.1lf\n", soma); //exibir o valor da soma
+    }
+    else if (a =='M'){//se escolhido media
+        printf("%.1lf\n", media); //exibir o valor da media
+    }
+}
+  
+    return 0;
+}
