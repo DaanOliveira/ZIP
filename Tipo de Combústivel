@@ -1,0 +1,19 @@
+#include <stdio.h>
+  
+int main() {
+  
+    int al=0, gs=0, ds=0, num;
+    while (num != 4){ // enquanto o numero digitado for diferente de 4
+        scanf("%d", &num);
+        switch (num){ //escolhendo os combustiveis, cada vez que um dos tres combustiveis for escolhido ira acrescentar +1
+            case 1: al++; break;
+            case 2: gs++; break;
+            case 3: ds++; break;
+            case 4: break;
+             
+        }
+    }
+    printf("MUITO OBRIGADO\nAlcool: %.1d\nGasolina: %.1d\nDiesel: %.1d\n", al, gs, ds);
+     
+    return 0;
+}
