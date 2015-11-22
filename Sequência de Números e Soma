@@ -1,0 +1,26 @@
+#include <stdio.h>
+  
+int main() {
+  
+    int M=1, N=1, a, b, SOMA=0;
+    while (M>0 && N>0){ //CONDIÇÃO PARA NÃO DIGITAR NUMERO MENOR OU IGUAL A ZERO!
+        scanf("%d%d", &M, &N);
+        if (M>N){ // CASO PRIMEIRO NUMERO FOR MAIOR QUE SEGUNDO IRA TROCAR AS POSIÇÕES ATÉ QUE FIQUEM EM ORDEM
+        b=M; // B ASSUME O VALOR DE M
+        M=N; // M ASSUME O VALOR DE B, ASSIM COLOCANDO O SEGUNDO NUMERO NO COMEÇO
+        N=b; // N ASSUME B, COLOCANDO O NUMERO MAIOR NA POSIÇÃO CORRETA
+    }
+     
+    if (M>0 && N>0){ // VERIFICA SE OS NUMEROS SÃO MAIORES QUE ZERO PARA REALIZAÇÃO DA SOMA
+        for(a=M; a<=N; a++){ // O "A" VAI ARMAZENAR A SOMA DOS NUMEROS, DO MENOS AO MAIOR
+            printf("%d ", a);
+            SOMA+=a;
+            }
+        printf("Sum=%d\n", SOMA);
+             
+    }
+     
+    SOMA=0; // ZERA A SOMA
+    }
+    return 0;
+}
