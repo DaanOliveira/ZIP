@@ -1,0 +1,39 @@
+#include <stdio.h>
+  
+int main() {
+  
+      
+    int numero, soma = 0, a, b; // Definição das variaveis a ser utilizada no programa. 
+    char vetor[10000]; // controle de quantidade de vezes que podera digitar de uma vez
+    scanf("%d", &numero);//recebendo a quantidade de numeros que usuario podera fazer
+    for(a = 0; a < numero; a++){// De acordo com o numero que o usuario digitar vai ser a quantidade de vezes que ele podera informar para saber quantos leds vai precisar para formar o numero. 
+        scanf("%s", vetor);
+        for(b = 0; b < strlen(vetor) ; b++){//verifica se o valor digitado dos case não ultrapassou o vetor
+        switch(vetor[b]){// De acordo com o numero que foi digitado vai sendo somado quantos Leds precisa para formar o numero informado. 
+            case '0': soma+=6; 
+            break;
+            case '1': soma+=2;
+            break;
+            case '2': soma+=5;
+            break;
+            case '3': soma+=5;
+            break;
+            case '4': soma+=4;
+            break;
+            case '5': soma+=5;
+            break;
+            case '6': soma+=6;
+            break;
+            case '7': soma+=3;
+            break;
+            case '8': soma+=7;
+            break;
+            case '9': soma+=6;
+            break;
+            }   
+            }
+            printf("%d leds\n", soma);// Apresenta na tela a quantidade de Leds que precisa 
+            soma = 0; //zera a soma para continuar até finalizar a quantidade de casos
+    }
+    return 0;
+}
