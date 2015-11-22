@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+int main(){
+    int qtd, a, b, cont=0;
+    char v1[1000], v2[1000];
+    scanf("%d", &qtd);
+    for (a=0; a<qtd; a++){
+        scanf("%s%s", &v1, &v2);
+        if (strlen(v2)>strlen(v1)){ // SE O VALOR 2 FOR MAIOR QUE O VALOR 1
+            printf("nao encaixa\n");
+            continue;
+        } 
+        if (strcmp(v1,v2)==0){ //VERIFICA SE OS VALORES DE V1 E V2 SÃO IGUAIS
+            printf("encaixa\n");
+            continue;
+        }
+         
+        for (b=0; b<strlen(v2); b++){
+            if (v1[strlen(v1)-strlen(v2)+b]==v2[b])
+            cont++;
+            else{
+                cont=-1; break;
+            }
+        }
+        printf("%s\n", cont==-1? "nao encaixa" : "encaixa");
+    }
+ 
+  
+    return 0;
+}
