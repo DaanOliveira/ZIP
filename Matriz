@@ -1,0 +1,36 @@
+#include <stdio.h>
+  
+int main() {
+  
+    int num=1, a, b, c, SOMA=0;
+    while(num!=0){ // NUMERO DIFERENTE DE ZERO
+        scanf("%d", &num);
+        int matriz[num][num];
+        for (a=0;a<num;a++){ // ARMAZENA OS NUMEROS NA MATRIZ
+            for (b=0; b<num; b++){
+                matriz[a][b]=0;
+            }
+        }
+        for (c=0; c<=(num/2); c++){
+            for (a=c; a<num-c; a++){
+                for (b=c; b<num-c; b++){
+                    matriz[a][b]++;
+                     
+                }
+            }
+        }
+        SOMA++;
+        if (num!=0){
+            for (a=0; a<num; a++){
+                for (b=0; b<num; b++){
+                    printf("%3d", matriz[a][b]);
+                    if (b<num-1) printf(" ");
+                }
+                printf("\n");
+            }
+            printf ("\n");
+        }
+    }
+  
+    return 0;
+}
